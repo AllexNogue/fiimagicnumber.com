@@ -77,7 +77,7 @@
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0" id="show" style="display: none;">O Magic Number é: <span id="num-cotas" class="text-dark">000</span> cotas/ações</p>
+            <p class="masthead-subheading font-weight-light mb-0" id="show" style="display: none;">O Magic Number é: <span id="num-cotas" class="text-dark">000</span> cotas/ações OU <span id="num-reais" class="text-dark">R$ 0,00</span> investidos.</p>
         </div>
     </header>
     <!-- Portfolio Section-->
@@ -208,8 +208,11 @@
             var dividendo = parseFloat($('#dividendo').val().replace(",", "."));
 
             var cotas = Math.ceil(ativo / dividendo);
+            var reais = parseFloat(cotas*ativo).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
             if (cotas > 0) {
+
+                $('#num-reais').html(reais);
                 $('#num-cotas').html(cotas);
                 $('#show').css('display', 'block');
             }

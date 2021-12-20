@@ -27,6 +27,9 @@
     gtag('config', 'G-4FDJ13R291');
     </script>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7593288409880724"
+     crossorigin="anonymous"></script>
+
 </head>
 
 <body id="page-top">
